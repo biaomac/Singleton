@@ -6,7 +6,7 @@
 
 // [[1]] 单例的主要内容声明与实现.
 // Start of Declare_Singleton
-#define SINGLETON(Class)            \
+#define SINGLETON(Class)                    \
 public:                                     \
     static Class& getInstance() {           \
         if (instance.get() == 0) {          \
