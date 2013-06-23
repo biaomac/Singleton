@@ -6,7 +6,7 @@
 
 // [[1]] 单例的主要内容声明与实现.
 // Start of Declare_Singleton
-#define DECLARE_SINGLETON(Class)            \
+#define SINGLETON(Class)            \
 public:                                     \
     static Class& getInstance() {           \
         if (instance.get() == 0) {          \
@@ -27,11 +27,11 @@ private:                                    \
 // End of Declare_Singleton
 
 // [[2]] 静态instance对象的初始化.
-#define DECLARE_SINGLETON_INSTANCE(Class) std::auto_ptr<Class> Class::instance;
+#define SINGLETON_INSTANCE(Class) std::auto_ptr<Class> Class::instance;
 
 // [[3]] 默认的构造函数和析构函数.
-#define DECLARE_SINGLETON_DEFAULT_CONSTRUCTOR(Class) Class::Class() {};
-#define DECLARE_SINGLETON_DEFAULT_DESTRUCTOR(Class) Class::~Class() {};
+#define SINGLETON_DEFAULT_CONSTRUCTOR(Class) Class::Class() {};
+#define SINGLETON_DEFAULT_DESTRUCTOR(Class) Class::~Class() {};
 
 #endif // SINGLETON_HPP
 

@@ -1,7 +1,7 @@
 #include "MySingleton.hpp"
 #include <QString>
 
-DECLARE_SINGLETON_INSTANCE(MySingleton) // [[2]]
+SINGLETON_INSTANCE(MySingleton) // [[2]]
 
 struct MySingletonPrivate {
     int number;
